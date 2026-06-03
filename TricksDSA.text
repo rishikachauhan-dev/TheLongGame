@@ -1,0 +1,36 @@
+
+Fits here:
+
+| Type                 | Examples                        | Typical tools             |
+| -------------------- | ---------------------- | ------------------------- |
+| Array / List         | rotate array, remove duplicates | loops, two pointers       |
+| String               | palindrome, substring search    | slicing, hashing, KMP     |
+| Hash Map             | frequency, first unique element | dict / set                |
+| Math / Logic         | fib, gcd, digits, bits          | recursion, formula        |
+| Recursion / Backtrack| subsets, paths                  | recursive function        |
+| Sorting / Searching   | kth largest, binary search      | sort, heap, binary search |
+| DP / Sliding Window   | max subarray, longest substring | prefix sum, two pointers  |
+
+
+Check Time Complexity:  n < n log n < n^2
+Loop in loop → O(n²)
+One pass + dict → O(n)
+Sorting + one pass → O(n log n)
+Check Space Complexity — are you storing extra arrays/maps?
+
+
+Bonus: Debug Smart, Not Long
+When stuck, always check in this order:
+Variable initialization — wrong start value (-1 vs 0)
+Loop range — off-by-one or indentation error
+Return placement — missing return gives None
+Condition direction — < vs <=
+These 4 cause 90% of logic bugs.
+
+
+In for loop no need i+=1
+while loop needs increment
+
+
+#substring/subarray approach for any calc:
+i calculated with each next iteration of elements-brute force
