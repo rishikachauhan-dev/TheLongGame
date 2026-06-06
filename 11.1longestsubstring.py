@@ -4,30 +4,30 @@ maxi
 loop i check if next element is in hashmap if not add and increase count
 total=3
 '''
-#Brute--TC failed for some only works if we want subsequence
-# s = "pwwkew"
-# # s="abcabcbb"
-# myset=set()
-# for i in s:
-#     myset.add(i)
-# # return len(myset)
-# print(myset)
+# Brute--TC failed for some only works if we want subsequence
+s = "pwwkew"
+# s="abcabcbb"
+myset=set()
+for i in s:
+    myset.add(i)
+# return len(myset)
+print(myset)
 
 # Brute sol:
 # ques- set vs hashmap()-dict??- we take set cuz we want to confir if it is already in the result, dont want index etc
 #Brute
-# if not len(s):
-#     return 0
-# maxi=0
-# for i in range(len(s)):
-#     set={} # needs reset after each loop-cant have set it does not contain duplicate, so dict
-#     for j in range(i,len(s)):
-#         if s[j] in set:
-#             break 
-#         maxi=max(maxi,j-i+1)
-#         set[s[j]]=1
-#         # myset.add(tuple(s[j]))
-# return maxi
+if not len(s):
+    return 0
+maxi=0
+for i in range(len(s)):
+    set={} # needs reset after each loop-cant have set it does not contain duplicate, so dict
+    for j in range(i,len(s)):
+        if s[j] in set:
+            break 
+        maxi=max(maxi,j-i+1)
+        set[s[j]]=1
+        # myset.add(tuple(s[j]))
+return maxi
 
 #optimal
 '''
