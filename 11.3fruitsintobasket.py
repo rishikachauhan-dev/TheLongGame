@@ -47,3 +47,5 @@ while right <len(fruits):
     right+=1
 return maxi
 
+#o(n)
+#o(n)
