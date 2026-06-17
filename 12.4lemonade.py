@@ -20,4 +20,4 @@ for i in range(len(bills)):
 return True
 
 #o(n)
-#o(1) on;y five and ten used
+#o(1) only five and ten used

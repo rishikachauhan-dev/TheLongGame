@@ -6,7 +6,8 @@ same subset loop, inside recursion another recursion
 filter-if in result'''
 
 '''funct(subset):
-    base case-index>=length
+    base case-
+    index>=length
         total==target
             if in result skip else append
     
@@ -62,7 +63,7 @@ class Solution:
             result.append(subset.copy())
             return
         
-        if total > target or ind == len(candidates): #!!!!!!!
+        if total > target or ind >= len(candidates): #!!!!!!!
             return
         
         # pick (only if valid)
@@ -90,3 +91,11 @@ class Solution:
         result = []
         self.combsum(0, 0, [], candidates, target, result)
         return result
+#nolgn + 2^n
+# Sorting:     O(N log N)
+# Backtracking: O(N^(T/M))
+
+# Overall:     O(N log N + N^(T/M))
+#            ≈ O(N^(T/M))
+
+'''so since can reprewat the same index n^n but bit ^n t/m --minimal time the same no. is repated to comapre with target'''

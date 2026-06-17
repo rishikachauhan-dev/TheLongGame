@@ -31,3 +31,6 @@ class Solution:
                 lastend=currend
                 
         return count
+    
+#o(nlogn)-sort used 
+#o(n)

@@ -106,7 +106,7 @@ class Solution:
         
         #operation
         for i in range(ind,len(nums)):
-            if i>ind and nums[i]==nums[i-1]: #duplicayes skipping
+            if i>ind and nums[i]==nums[i-1]: #duplicates skipping
                 continue
 
             if nums[i]>target:

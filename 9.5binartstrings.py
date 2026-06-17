@@ -1,5 +1,5 @@
 n=3
-
+'''1 and 0 k kya combinaations bnege 3 l list mei'''
 class Solution:
 
     def solve(self, index, path, result, n):
@@ -10,11 +10,12 @@ class Solution:
             return 
         
         # choose 0
-        path[index] = "0"
+        path[index] = "0" #overwrite
         self.solve(index + 1, path, result, n)
         
+        '''no backtracking req'''
         # choose 1
-        path[index] = "1"
+        path[index] = "1" # overwrite
         self.solve(index + 1, path, result, n)
         
     def binstr(self, n):
@@ -23,7 +24,8 @@ class Solution:
         self.solve(0, path, result, n) # self start
         return result
 # print(result)   
-'''| index | path  | action           |
+'''
+| index | path  | action           |
 | ----- | ----- | ---------------- |
 | 0     | `_ _` | start            |
 | 0     | `0 _` | choose 0         |
@@ -43,6 +45,7 @@ No backtrackinh here- state restored by overwriting ✔
 True-0/1 can put both
 False-0 
 now flagging the previous track;
+ for 0- True, 1 - False
 after 1 is assigned it will next value track will be False, then next value track will be True'''
 
 class Solution:
@@ -61,6 +64,7 @@ class Solution:
         if flag == True:
             numbers[index] = "1"
             self.solve(index + 1, False, numbers, result)  # Next position can only have 0 # flag that pos to False now
+
             numbers[index] = "0"  # Backtrack: reset to "0" for clean slate
 
     def binstr(self, n):
