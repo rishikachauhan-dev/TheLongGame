@@ -38,7 +38,7 @@ class Solution:
         # subset.pop()
         # sum-=arr[ind]
         
-        self.solvesum(ind+1,sum,arr,result
+        self.solvesum(ind+1,sum,arr,result)
              
 	def subsetSums(self, arr):
 		result=[]

@@ -24,6 +24,9 @@ print(total)
 items=[(v/w,v,w) for v, w in zip(val,wt) if w>0] # make list of ratio and w>0 to avoid 0 devision
 #sort items by ratio, which is at 0 index and in descending order
 items.sort(key=lambda x: x[0], reverse=True)
+'''Sort items
+using the first element of each item
+in descending order'''
 currwt=0
 totalval=0
 for ratio,v,w in items:

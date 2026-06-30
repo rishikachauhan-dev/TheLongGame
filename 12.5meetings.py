@@ -1,3 +1,7 @@
+start= [1, 3, 0, 5, 8, 5]
+finish= [2, 4, 6, 7, 9, 9]
+
+
 '''
 N Meetings in One Room
 
@@ -9,7 +13,7 @@ N Meetings in One Room
 5. Count selected meetings
 
 Greedy:
-"Finish earliest, leave room for others."
+"Finish earliest, leave room for others.---jo meeting jldi khtm ho rhi hai use pehle lo zyda meeting le paoge room mei"
 '''
 class Solution:
     def activitySelection(self, start, finish):
@@ -19,6 +23,7 @@ class Solution:
             meeting.append((finish[i],start[i]))
         
         meeting.sort()# to sort by end take end first in the meeeting
+        # meeting =[(2, 1),(4, 3),(6, 0),(7, 5),(9, 5),(9, 8)]
         count=1
         lastend=meeting[0][0]
         
@@ -29,7 +34,8 @@ class Solution:
             if currstart>lastend:
                 count+=1
                 lastend=currend
-                
+            # else:
+            #     pass, without is behaves the same way
         return count
     
 #o(nlogn)-sort used 

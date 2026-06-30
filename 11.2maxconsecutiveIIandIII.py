@@ -1,4 +1,6 @@
 #max consecutive II------------
+# You are given a binary array nums that contains only 0s and 1s. 
+# You need to find the maximum number of consecutive 1s that you can get if you are allowed to flip at most one 0 to 1.
 # nums = [1, 0, 1, 1, 0]
 nums = [1,1,0,1,0,1,1]
 # nums = [0,0,1,1,1]

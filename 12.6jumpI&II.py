@@ -1,8 +1,9 @@
 #JUMP I
 nums = [2,3,1,1,4]
+# nums = [3,2,1,0,4]
 maxindex=0
 for i in range(len(nums)):
-    if i> maxindex: # if the i is > than the max index means cant jump no more
+    if i> maxindex: # if the i is > than the max index basically out of the len means cant jump no more
         return False
     
     maxindex=max(maxindex,i+nums[i]) # i+the jump in the max index
@@ -11,19 +12,22 @@ for i in range(len(nums)):
 
 #Jump II
 '''
-I am standing at index.
+At index 0:
+nums[0] = 2
 
-I try jump 1.
-I ask recursion:
-"Hey, if I land here,
-what answer do you get?"
+Can jump:
+1 step
+2 steps
 
-I try jump 2.
-I ask recursion again.
+So your brain should think:
+Should I jump to 1?
 
-I compare all answers.
+or
 
-I keep the smallest.
+Should I jump to 2?
+Let's try both.
+Whichever reaches the end in fewer jumps wins.
+
 '''
 #Brute
 class Solution:
@@ -35,7 +39,7 @@ class Solution:
         #operation
         mini=float("infinity")
 
-        for i in range(1, nums[index]+1):
+        for i in range(1, nums[index]+1): # for i till th number in that curr index i is the jump
             mini=min(mini,self.solve(index+i,jump+1,nums))# debugged i was 1
         return mini
 

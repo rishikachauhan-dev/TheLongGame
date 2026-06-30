@@ -49,7 +49,9 @@ total>target or index>=len(subset)
 # Combination Sum-II
 '''
 no duplicate subsets
+#Brute- sort add to set if in set skip, return set
 
+#Optimal-
 pick not pick like subsequnce with sum
 
 for handling duplicates-
@@ -57,5 +59,7 @@ sort nums then a loop for i in range(index to n)- check if i> index (avoid picki
 '''
 
 # Subset Sum-I
+
+
 # Combination Sum - III
 # Letter Combinations of a Phone number

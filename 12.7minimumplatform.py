@@ -29,7 +29,7 @@ j=0
 while i< len(arr) and j<len(dep):
     if dep[j]<arr[i]: # means dep before arr of i no need for new platform, dep jldi ho rha, for gfg needs new platform if equal arr and dep
         count-=1
-        j+=1 # see or dep jo jldi ho rhe hai
+        j+=1 # see if dep jldi ho rhe hai
         
     else: # arrival hai
         count+=1
