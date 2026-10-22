@@ -1,5 +1,5 @@
 class Solution:
-    def solve(self,last,sum,n,k,subset,result):
+    def solve(self,index,sum,n,k,subset,result):
         #base case
         if sum==n and len(subset)==k: #both must be true
             result.append(subset.copy())
@@ -8,7 +8,7 @@ class Solution:
         if sum>n or len(subset)>k:
             return
         #operation
-        for i in range(last,10): #last index
+        for i in range(index,10): #last index
             subset.append(i)
             self.solve(i+1,sum+i,n,k,subset,result) #1+1-start from 2--
             subset.pop()#bactrack

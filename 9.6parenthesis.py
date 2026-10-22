@@ -62,3 +62,29 @@ self.solve(index + 1, total + 1, brackets, result)
 brackets[index] = ")"
 self.solve(index + 1, total - 1, brackets, result)
 '''
+#Simplified and pruning while calling:
+class Solution:
+    def solve(self,index,total,brackets,result):
+
+        if total < 0 or total > len(brackets)//2:
+            return
+
+        if index == len(brackets):
+            if total == 0:
+                result.append("".join(brackets))
+            return
+
+        brackets[index] = "("
+        self.solve(index+1, total+1, brackets, result)
+
+        brackets[index] = ")"
+        self.solve(index+1, total-1, brackets, result)
+
+    def generateParenthesis(self, n):
+        result=[]
+        brackets=[""]*(2*n)
+
+        self.solve(0,0,brackets,result)
+
+        return result
+        

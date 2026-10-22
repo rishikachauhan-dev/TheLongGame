@@ -22,6 +22,7 @@ Happens with lits or mutable objects-like list dict etc.
 | int  | ❌ no     | ❌ impossible |
 | str  | ❌ no     | ❌ no         |
 '''
+arr=[1,2]
 class Solution:
     def solvesum(self,ind,sum,arr,result):
         if ind>=len(arr):
@@ -33,19 +34,19 @@ class Solution:
         # sum+=arr[ind]-add that to fucntion cuz backtracking on sum not needed
         
         #pick
-        self.solvesum(ind+1,sum+arr[ind],arr,result)
+        self.solvesum(ind+1,sum+arr[ind],arr,result) # (0+1+2=3), now sum=3 added in result, 2nd call backtrack-to i=1, cuz return after adding i=2
         
         # subset.pop()
         # sum-=arr[ind]
         
-        self.solvesum(ind+1,sum,arr,result)
+        self.solvesum(ind+1,sum,arr,result) # just the same no. no add, prev call sum whic did not get added, 1,2,0
              
 	def subsetSums(self, arr):
 		result=[]
 		self.solvesum(0,0,arr,result)
 		return result
 
-
+# [3,1,2,0]
 
 '''
 In this subset sum problem:

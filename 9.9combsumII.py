@@ -92,8 +92,10 @@ class Solution:
 '''Loop movement = duplicate skipping
 Recursive call = picking'''
 
-nums=[1,1,1,2,2,3,6]
-target=6
+# nums=[1,1,1,2,2,3,6]
+# target=6
+nums = [1,1,2,5]
+target = 3
 
 class Solution:
 
@@ -122,3 +124,12 @@ class Solution:
         self.solve(0, target,nums,[],result)
         return result
 
+
+'''
+nums=[1,1,2,5], target=3
+i=0, firts call-[1]
+i=1, 2 call-[1,1]
+i=2, 3 call-[1,1,2] but target 2>1, break----return to i=1
+so pop (bactrack)-undo choice i=1
+i=2,  4 call-[1,] check 2>1 in (1,4)--
+'''

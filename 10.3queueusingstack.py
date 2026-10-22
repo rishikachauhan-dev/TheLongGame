@@ -11,7 +11,7 @@ class MyQueue:
         while self.stack1:
             self.stack2.append(self.stack1.pop())
         self.stack1.append(x)
-        while self.stack2:
+        while self.stack2: # sending it back
             self.stack1.append(self.stack2.pop())
         
 

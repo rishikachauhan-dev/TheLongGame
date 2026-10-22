@@ -7,7 +7,7 @@ class Solution:
                 return
             subset.append(nums[ind])
             #pick
-            func(ind+1,subset)
+            func(ind+1,subset) #goes till end, then undos the last calls and pop for second pick
             subset.pop()
             func(ind+1,subset)
         func(0, [])
@@ -18,6 +18,13 @@ class Solution:
 | `0`  | start from index 0      |
 | `[]` | current subset is empty |
 
+                 []
+             /         \
+         Pick1       NotPick1
+          [1]            []
+        /     \        /     \
+   Pick2   NP2    Pick2    NP2
+ [1,2]   [1]      [2]      []
 
 You → func(0, [])
        ↓

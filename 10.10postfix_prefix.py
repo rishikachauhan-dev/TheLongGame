@@ -15,7 +15,7 @@ class Solution:
                 newexp=operand1+operand2+char
                 
                 stack.append(newexp)
-        return stack[-1]
+        return stack[-1] # the -1 is the last exp on the top stack
 #0(n)
 #0(n)
 
